@@ -9,7 +9,7 @@ param(
 
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$RequiredRdpVM
+    [string]$RequiredRdpVM = 'WINSRV19'
 )
 
 try {
