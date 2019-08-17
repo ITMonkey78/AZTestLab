@@ -5,7 +5,7 @@ param(
 
     [Parameter(Mandatory)]
     [ValidateNotNullOrEmpty()]
-    [string]$CourseName,
+    [string]$CourseName = 'AZTestLab',
 
     [Parameter()]
     [ValidateNotNullOrEmpty()]
