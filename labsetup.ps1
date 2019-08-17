@@ -12,8 +12,6 @@ param(
     [string]$RequiredRdpVM = 'WINSRV19'
 )
 
-try {
-
     ## Download the Azure PowerShell module if the student doesn't have it
     if (-not (Get-Module -Name Az -ListAvailable -ErrorAction Ignore)) {
         Install-Module -Name Az -Force
@@ -32,6 +30,8 @@ try {
     $templatePath = "$env:TEMP/lab.json"
     $url = 'https://raw.githubusercontent.com/ITMonkey78/AZTestLab/master/lab.json'
     Invoke-WebRequest -Uri $url -OutFile $templatePath
+
+try {
 
     ## Azure resource group will be the course name
     $rgName = "$($CourseName -replace ' ','-')"
