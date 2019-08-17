@@ -29,7 +29,7 @@ try {
     $ProgressPreference = 'SilentlyContinue'
 
     ## Download the ARM template
-    $templatePath = "$env:TEMP\lab.json"
+    $templatePath = "$env:TEMP/lab.json"
     $url = 'https://raw.githubusercontent.com/ITMonkey78/AZTestLab/master/lab.json'
     Invoke-WebRequest -Uri $url -OutFile $templatePath
 
